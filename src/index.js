@@ -4,7 +4,8 @@ import ReactDom from 'react-dom'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 
-require('../node_modules/mini.css/src/flavors/mini-default.scss')
+import '../node_modules/mini.css/src/flavors/mini-default.scss'
+import './index.scss'
 
 import ui from './store/reducer_ui.js'
 import user from './store/reducer_user.js'
@@ -12,19 +13,20 @@ import user from './store/reducer_user.js'
 const store = createStore(combineReducers({ui, user}))
 window.getState = store.getState
 
-import Header from './components/w_header.js'
 import Home from './components/r_home.js'
-import About from './components/r_about.js'
 
 class App extends Component {
     render(){
         return (
             <BrowserRouter>
-                <Header />
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/about" exact component={About} />
-                </Switch>
+                <div className="container">
+                    <ul id="header">
+                        <li><Link to="/">Home</Link></li>
+                    </ul>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                    </Switch>
+                </div>
             </BrowserRouter>
         )
     }
