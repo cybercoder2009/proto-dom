@@ -4,6 +4,8 @@ import ReactDom from 'react-dom'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
 
+require('../node_modules/mini.css/src/flavors/mini-default.scss')
+
 import ui from './store/reducer_ui.js'
 import user from './store/reducer_user.js'
 
