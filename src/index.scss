@@ -1,0 +1,67 @@
+/* common */
+body,a {
+    all: unset;
+}
+a:hover{
+    cursor: pointer;
+}
+
+/* antd */
+.ant-layout-sider {
+    height: 100vh;
+}
+.ant-drawer-body {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+}
+.ant-drawer-left .ant-drawer-body {
+    text-align: right;
+}
+.ant-drawer-right .ant-drawer-body {
+    text-align: left;
+}
+
+/* app */
+#app {
+    height: 100vh;
+}
+#sider>div{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+#sider>div>div,#sider>div>a{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+}
+#sider>div>div:hover{
+    background-color: #F5F5F5;
+}
+#header,#footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: #FFF;
+}
+#header>div,#footer>div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+#header .ant-avatar:hover{
+    cursor: pointer;
+}
+
+/* content */
+#content {
+    padding: 10px;
+}
+#content-mobile {
+    padding: 10px;
+}
